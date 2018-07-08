@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Train Game</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css"/>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  </head>
+
+  <body>
+    <div class="jumbotron">
+        <div class="container text-center">
+            <h1>Trains Trains Trains</h1>
+            <br>
+            <span for="" id="currentTime"></span>
+            <br>
+            <br>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <div class="container" id="schedule">
+        <h2 class="card-header">Current Train Schedule</h2>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Train Name</th>
+                    <th>Destination</th>
+                    <th>Frequency</th>
+                    <th>Next Arrival</th>
+                    <th>Minutes Away</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <br>
+    <div class="container" id="form">
+        <div class="row" id="input">
+            <div class="col-sm-12 card">
+                <div class="card-header"><h2>Add a Train</h2></div>
+                <br>
+                <br>
+                <form class="card-body">
+                    <div class="form-group">
+                        <label>Train Name</label>
+                        <input type="text" class="form-control" id="trainInput" placeholder="Steam 49">
+
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label>Destination</label>
+                        <input type="text" class="form-control" id="destinationInput" placeholder="Forks, WY">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label>First Train Time (HH:mm - military time)</label>
+                        <input type="text" class="form-control" id="firstTrainInput" placeholder="--:--">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label>Frequency (min) </label>
+                        <input type="text" class="form-control" id="frequencyInput" placeholder="37">
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-success" id="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <br> <br> <br> <br>
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/javascript/train.js"></script>
+  </body>
+
+</html>
